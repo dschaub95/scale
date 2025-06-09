@@ -18,8 +18,6 @@ from scale.config import Config
 def calc_clusterings(
     adata,
     n_jobs=20,
-    flavor="igraph",
-    n_iterations=2,
     spatial_key="spatial",
     **kwargs,
 ):
@@ -47,8 +45,7 @@ def calc_clusterings(
                 n_jobs=n_jobs,
                 verbose=kwargs.get("verbose", False),
                 random_state=i,
-                flavor=flavor,
-                n_iterations=n_iterations,
+                **kwargs,
             )
         clusterings = ad_tmp.obs[[c for c in ad_tmp.obs.columns if "leiden" in c]]
         all_clusterings = pd.concat([all_clusterings, clusterings], axis=1)
