@@ -9,7 +9,7 @@ from scale.model import GNN
 from scale.utils import preprocess, spatial_graph, GraphAggregation, seed_everything
 
 
-def train(adata, cfg, spatial_key="spatial", seed=42, device=None, return_model=False):
+def train(adata, cfg, spatial_key="spatial", seed=200, device=None, return_model=False):
     seed_everything(seed)
 
     if device is None:
