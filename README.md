@@ -1,6 +1,6 @@
 # SCALE: Unsupervised Multi-Scale Domain Identification in Spatial Omics Data
 
-SCALE is a Python package for identifying multi-scale spatial domains in spatial omics data. It leverages graph neural representation learning and an entropy-based search algorithm to detect stable spatial domains at different scales, enabling comprehensive analysis of tissue organization.
+SCALE is a Python package for identifying multi-scale spatial domains in spatial omics data. It leverages graph neural representation learning and an entropy-based search algorithm to detect stable spatial domains at different scales, enabling comprehensive analysis of tissue organization. The preprint can be found [here](https://www.biorxiv.org/content/10.1101/2025.05.21.653987v1).
 
 ## Installation
 Clone the repository:
