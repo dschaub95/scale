@@ -62,7 +62,9 @@ def calc_stability(
     )
     stability_df.index.name = "distance"
     stability_df.columns.name = "resolution"
-    for i, dist in tqdm(enumerate(distances), desc="Calculating stability"):
+    for i, dist in tqdm(
+        enumerate(distances), total=len(distances), desc="Calculating stability"
+    ):
         for j, res in enumerate(resolutions):
             ari_scores = []
             for r1 in range(n_repeat):
